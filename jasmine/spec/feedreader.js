@@ -104,11 +104,11 @@ $(function() {
      * Remember, loadFeed() is asynchronous so this test will require
      * the use of Jasmine's beforeEach and asynchronous done() function.
      */
-    describe('content change', function() {
+    describe('New Feed Selection', function() {
+            const feed1 = document.querySelector('.feed');
+            const feed2 = document.querySelector('.feed');
             beforeEach(function(done) {
                 loadFeed(0, function() {
-                    const feed1 = document.querySelector('.feed');
-                    const feed2 = document.querySelector('.feed');
                     expect('feed1').not.toBe('feed2');
                     done();
                 });
