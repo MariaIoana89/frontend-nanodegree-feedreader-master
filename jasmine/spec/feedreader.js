@@ -54,7 +54,7 @@ $(function() {
     describe('The Menu', function() {
         //menu element is hidden by default
         it('menu hidden', function() {
-            expect($('body').hasClass('menu-hidden')).toBeTruthy();
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
 
 
@@ -88,7 +88,7 @@ $(function() {
 
         //loadFeed is called when complete
         it('loadFeed complete', function(done) {
-            expect(('.feed .entry').length).toBeGreaterThan(0);
+            expect($('.feed .entry').length).toBeGreaterThan(0);
             done();
         });
     });
