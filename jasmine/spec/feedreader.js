@@ -36,7 +36,7 @@ $(function() {
         it('are named', function() {
             allFeeds.forEach(function(feed) {
                 expect(feed.name).toBeDefined();
-                expect(feed.name.length).not.toBe(0);
+                expect(feed.name.length).not.toBe("");
             });
         });
 
@@ -67,9 +67,9 @@ $(function() {
          */
         //visibility of menu icon
         it('menu visible by click', function() {
-            $('.menu-icon-link').click();
+            $('a.menu-icon-link').click();
             expect($('body').hasClass('menu-hidden')).not.toBe(true);
-            $('menu-icon-link').click();
+            $('a.menu-icon-link').click();
             expect($('body').hasClass('menu-hidden')).toBe(true);
 
         });
