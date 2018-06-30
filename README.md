@@ -9,7 +9,7 @@ Not required. All you need to do is to clone the repository on your computer fro
 
 ## Instructions
 Open index.html once you have downloaded/cloned.
-You can see on bottom page that are 6 specs and all succeded.
+You can see on bottom page that are 7 specs and all succeded.
 
 ## Notes
 Testing is an important part of the net development, which insure customers the got what they paid off.

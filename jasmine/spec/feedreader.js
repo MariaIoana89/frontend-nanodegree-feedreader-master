@@ -1,11 +1,4 @@
-/* feedreader.js
- *
- * This is the spec file that Jasmine will read and contains
- * all of the tests that will be run against your application.
- */
-
-/* We're placing all of our tests within the $() function,
- * since some of these tests may require DOM elements. We want
+/* some of these tests may require DOM elements. We want
  * to ensure they don't run until the DOM is ready.
  */
 $(function() {
@@ -65,14 +58,17 @@ $(function() {
         beforeEach(function(done) {
             loadFeed(0, function() {
                 //feed 1 done loading
-                const feed1 = document.querySelector('.feed');
+                feed1 = $('.feed').html();
                 loadFeed(1, function() {
                     //feed 2 done loading
-                    const feed2 = document.querySelector('.feed');
+                    feed2 = $('.feed').html();
                     //all variables initialised, can begin tests
                     done();
                 });
             });
+        });
+        it('feeds are not the same', function() {
+            expect(feed1).not.toBe(feed2);
         });
     });
 }());
